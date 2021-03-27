@@ -3,7 +3,7 @@ import unittest
 from sigfig import SigFig
 
 
-class TestSfformat(unittest.TestCase):
+class TestMaxSigFigs(unittest.TestCase):
 
     def test_zeros(self):
         self.assertEqual('0', SigFig.sfformat(0, max_sig_figs=2))
