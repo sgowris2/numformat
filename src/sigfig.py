@@ -10,7 +10,7 @@ class SigFig:
                    max_sig_figs: int = None,
                    max_length: int = None,
                    allow_scientific_notation: bool = True,
-                   allow_engineering_notation: bool = False):
+                   allow_engineering_notation: bool = True):
 
         SigFig.__check_autoformat_args(max_sig_figs=max_sig_figs,
                                        max_length=max_length,

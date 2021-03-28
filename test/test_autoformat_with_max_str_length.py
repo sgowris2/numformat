@@ -3,7 +3,7 @@ import unittest
 from sigfig import SigFig
 
 
-class TestMaxSigFigsAndMaxStrLength(unittest.TestCase):
+class TestAutoFormatWithMaxStrLength(unittest.TestCase):
 
     def test_invalid_max_str_length(self):
         with self.assertRaises(ValueError):

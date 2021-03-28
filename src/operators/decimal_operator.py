@@ -68,6 +68,7 @@ class DecimalOperator(IntegerOperator):
     def to_engineering_notation(self):
         if self.is_integer:
             return self.integer_operator.to_engineering_notation()
+        return self.value.normalize().to_eng_string()
 
     def __str__(self):
         return self.to_standard_notation()

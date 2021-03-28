@@ -1,3 +1,4 @@
+from decimal import Decimal
 from math import floor, log10
 
 from operators.operator import Operator
@@ -35,7 +36,13 @@ class IntegerOperator(Operator):
         return sn_format.format(self.value)
 
     def to_engineering_notation(self):
-        pass
+        sci = self.to_scientific_notation()
+        exponent = int(sci.split('e')[1].replace('+', '').replace('-', ''))
+        diff = exponent % 3
+        if diff == 0:
+            return sci
+        else:
+            return Decimal(self.value).normalize().to_eng_string()
 
     def __str__(self):
         return self.to_standard_notation()
