@@ -7,7 +7,9 @@ def autoformat(value,
                max_sig_figs: int = None,
                max_length: int = None,
                allow_scientific_notation: bool = True,
-               allow_engineering_notation: bool = True):
+               allow_engineering_notation: bool = True,
+               preserve_sig_figs: bool = False,
+               strict: bool = False):
     __check_autoformat_args(max_sig_figs=max_sig_figs,
                             max_length=max_length,
                             allow_scientific_notation=allow_scientific_notation,
@@ -22,8 +24,8 @@ def autoformat(value,
     nf = Formatter(operator=operator, max_length=max_length,
                    allow_scientific_notation=allow_scientific_notation,
                    allow_engineering_notation=allow_engineering_notation,
-                   preserve_sig_figs=False,
-                   strict=False)
+                   preserve_sig_figs=preserve_sig_figs,
+                   strict=strict)
     return nf.to_max_length()
 
 
