@@ -1,8 +1,8 @@
 from decimal import Decimal
 
-from operators.decimal_operator import DecimalOperator
-from operators.integer_operator import IntegerOperator
-from utils import to_decimal, to_int
+from numformat.operators.decimal_operator import DecimalOperator
+from numformat.operators.integer_operator import IntegerOperator
+from numformat.utils import to_decimal, to_int
 
 
 class OperatorFactory:

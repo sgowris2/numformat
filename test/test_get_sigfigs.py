@@ -1,6 +1,6 @@
 import unittest
 
-from operators.operator_factory import OperatorFactory
+from numformat.operators.operator_factory import OperatorFactory
 
 
 class TestGetSigFigs(unittest.TestCase):

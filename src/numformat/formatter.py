@@ -1,9 +1,9 @@
 from typing import Iterable
 
-from operators.operator import Operator
+from numformat.operators.operator import Operator
 
 
-class NumberFormatter:
+class Formatter:
 
     def __init__(self, operator, max_length,
                  allow_scientific_notation=True,

@@ -1,5 +1,10 @@
 *.pyc
 
+# Build related
+build/
+dist/
+*.egg-info*
+
 # Virtual environment related
 venv/
 

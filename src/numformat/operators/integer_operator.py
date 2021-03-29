@@ -1,7 +1,7 @@
 from decimal import Decimal
 from math import floor, log10
 
-from operators.operator import Operator
+from numformat.operators.operator import Operator
 
 
 class IntegerOperator(Operator):
