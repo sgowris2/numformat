@@ -62,7 +62,7 @@ class DecimalOperator(IntegerOperator):
     def to_scientific_notation(self):
         if self.is_integer:
             return self.integer_operator.to_scientific_notation()
-        sn_format = '{{:.{}e}}'.format(self.get_sigfigs() - 1)
+        sn_format = '{{:.{}e}}'.format(max(self.get_sigfigs() - 1, 0))
         return sn_format.format(self.value)
 
     def to_engineering_notation(self):
