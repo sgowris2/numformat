@@ -32,17 +32,12 @@ class IntegerOperator(Operator):
         return str(self.value)
 
     def to_scientific_notation(self):
-        sn_format = '{{:.{}e}}'.format(self.get_sigfigs() - 1)
+        sn_format = '{{:.{}e}}'.format(max(self.get_sigfigs() - 1, 0))
         return sn_format.format(self.value)
 
     def to_engineering_notation(self):
         sci = self.to_scientific_notation()
-        exponent = int(sci.split('e')[1].replace('+', '').replace('-', ''))
-        diff = exponent % 3
-        if diff == 0:
-            return sci
-        else:
-            return Decimal(self.value).normalize().to_eng_string()
+        return Decimal(sci).to_eng_string()
 
     def __str__(self):
         return self.to_standard_notation()
